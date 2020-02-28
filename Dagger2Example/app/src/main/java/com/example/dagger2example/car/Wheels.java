@@ -1,6 +1,4 @@
-package com.example.dagger2example;
-
-import javax.inject.Inject;
+package com.example.dagger2example.car;
 
 public class Wheels {
 
