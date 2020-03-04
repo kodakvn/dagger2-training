@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.example.dagger2example.dagger.AppComponent;
 import com.example.dagger2example.dagger.DaggerAppComponent;
+import com.example.dagger2example.dagger.DriverModule;
 
 public class App extends Application {
     private AppComponent component;
@@ -12,7 +13,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
 
-        component = DaggerAppComponent.create();
+        component = DaggerAppComponent.factory().create(new DriverModule("KODAK"));
     }
 
     public AppComponent getAppComponent() {
