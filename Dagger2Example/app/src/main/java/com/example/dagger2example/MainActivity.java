@@ -11,9 +11,8 @@ import com.example.dagger2example.dagger.DieselEngineModule;
 import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {
-
     @Inject
-    Car car;
+    Car car1, car2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 .engineCapacity(14000)
                 .build();
         component.inject(this);
-        car.drive();
+        car1.drive();
+        car2.drive();
     }
 }
